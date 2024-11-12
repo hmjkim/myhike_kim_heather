@@ -1,5 +1,6 @@
 var hikeDocID = localStorage.getItem("hikeDocID");    //visible to all functions on this page
-
+var user = firebase.auth().currentUser;
+console.log("user", user)
 function getHikeName(id) {
     db.collection("hikes")
       .doc(id)
